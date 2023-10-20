@@ -10,10 +10,10 @@
 				<span class="self-center text-2xl font-semibold whitespace-nowrap">TokenNest</span>
 			</a>
 			<div class="flex md:order-2">
-				<button
+				<a
 					type="button"
-					class="block py-2 mx-3 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0"
-					>Login</button
+					class="block py-2 mx-3 pl-3 pr-4 m-1 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0"
+					href="/login">Login</a
 				>
 				<a
 					type="button"
