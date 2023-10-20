@@ -1,5 +1,5 @@
-name: ci-test
-run-name: 🚀 Running Tests 🚀
+name: Running Tests + Lint 🧪
+run-name: Running Tests + Lint 🧪
 on: [push]
 jobs:
   Explore-GitHub-Actions:
