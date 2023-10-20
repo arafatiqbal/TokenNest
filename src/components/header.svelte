@@ -1,6 +1,8 @@
 <script lang="ts">
 </script>
 
+<!-- Remove this and comment below when links are added, this is to make lint happy -->
+<!-- svelte-ignore a11y-invalid-attribute -->
 <section>
 	<nav class="bg-white border-gray-200">
 		<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
