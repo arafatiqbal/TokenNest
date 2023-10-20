@@ -32,7 +32,7 @@
 					<li>
 						<a
 							href="#"
-							class="block py-2 pl-3 pr-4 text-white bg-primary-700 rounded md:bg-transparent md:text-primary-700 md:p-0"
+							class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:hover:text-primary-700 md:p-0"
 							aria-current="page">Home</a
 						>
 					</li>
