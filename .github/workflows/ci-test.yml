@@ -1,0 +1,21 @@
+name: Running Tests + Lint 🧪
+run-name: Running Tests + Lint 🧪
+on: [push]
+jobs:
+  token-nest-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.32.9
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'pnpm'
+      - name: Install
+        run: pnpm install
+      - name: Run tests
+        run: pnpm vitest
+      - name: Run Lint
+        run: pnpm lint
