@@ -12,14 +12,9 @@
 			<div class="flex md:order-2">
 				<a
 					type="button"
-					class="block py-2 mx-3 pl-3 pr-4 m-1 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0"
-					href="/login">Login</a
-				>
-				<a
-					type="button"
-					href="/signup"
+					href="/login"
 					class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-4 mb-2 py-2 text-center mr-3 md:mr-0"
-					>Get started</a
+					>Dashboard</a
 				>
 			</div>
 			<div
