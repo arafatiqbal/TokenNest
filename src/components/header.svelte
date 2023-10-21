@@ -6,7 +6,7 @@
 <section>
 	<nav class="bg-white border-gray-200">
 		<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-			<a href="" class="flex items-center">
+			<a href="/" class="flex items-center">
 				<span class="self-center text-2xl font-semibold whitespace-nowrap">TokenNest</span>
 			</a>
 			<div class="flex md:order-2">
@@ -18,7 +18,7 @@
 				<a
 					type="button"
 					href="/signup"
-					class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
+					class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-4 mb-2 py-2 text-center mr-3 md:mr-0"
 					data-sveltekit-preload-data="tap">Get started</a
 				>
 			</div>
@@ -31,7 +31,7 @@
 				>
 					<li>
 						<a
-							href="#"
+							href="/"
 							class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:hover:text-primary-700 md:p-0"
 							aria-current="page">Home</a
 						>
