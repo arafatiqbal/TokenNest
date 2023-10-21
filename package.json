@@ -13,8 +13,8 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		"@supabase/auth-helpers-sveltekit": "^0.10.3",
-		"@supabase/supabase-js": "^2.38.1",
+		"@auth/core": "^0.17.0",
+		"@auth/sveltekit": "^0.3.10",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.26.0",
 		"@testing-library/svelte": "^4.0.4",
