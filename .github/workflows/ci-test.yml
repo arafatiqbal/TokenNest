@@ -2,7 +2,7 @@ name: Running Tests + Lint 🧪
 run-name: Running Tests + Lint 🧪
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  token-nest-ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
