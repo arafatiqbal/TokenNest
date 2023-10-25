@@ -7,16 +7,16 @@ settings:
 devDependencies:
   '@supabase/auth-helpers-sveltekit':
     specifier: ^0.10.3
-    version: 0.10.3(@supabase/supabase-js@2.38.2)(@sveltejs/kit@1.26.0)
+    version: 0.10.3(@supabase/supabase-js@2.38.2)(@sveltejs/kit@1.27.0)
   '@supabase/supabase-js':
     specifier: ^2.38.1
     version: 2.38.2
   '@sveltejs/adapter-auto':
     specifier: ^2.0.0
-    version: 2.1.0(@sveltejs/kit@1.26.0)
+    version: 2.1.0(@sveltejs/kit@1.27.0)
   '@sveltejs/kit':
-    specifier: ^1.26.0
-    version: 1.26.0(svelte@4.2.2)(vite@4.5.0)
+    specifier: ^1.27.0
+    version: 1.27.0(svelte@4.2.2)(vite@4.5.0)
   '@testing-library/svelte':
     specifier: ^4.0.4
     version: 4.0.4(svelte@4.2.2)
@@ -459,7 +459,7 @@ packages:
       jose: 4.15.4
     dev: true
 
-  /@supabase/auth-helpers-sveltekit@0.10.3(@supabase/supabase-js@2.38.2)(@sveltejs/kit@1.26.0):
+  /@supabase/auth-helpers-sveltekit@0.10.3(@supabase/supabase-js@2.38.2)(@sveltejs/kit@1.27.0):
     resolution: {integrity: sha512-vU39ecz1xXpBZMaSCZi7Rh+NLIS0W67hbrdWt2UdSWOVi/XT6z01DoO97/G4n5p/e9fyCR/j9xHGCoeFO++1lA==}
     peerDependencies:
       '@supabase/supabase-js': ^2.19.0
@@ -467,7 +467,7 @@ packages:
     dependencies:
       '@supabase/auth-helpers-shared': 0.5.0(@supabase/supabase-js@2.38.2)
       '@supabase/supabase-js': 2.38.2
-      '@sveltejs/kit': 1.26.0(svelte@4.2.2)(vite@4.5.0)
+      '@sveltejs/kit': 1.27.0(svelte@4.2.2)(vite@4.5.0)
     dev: true
 
   /@supabase/functions-js@2.1.5:
@@ -525,17 +525,17 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/adapter-auto@2.1.0(@sveltejs/kit@1.26.0):
+  /@sveltejs/adapter-auto@2.1.0(@sveltejs/kit@1.27.0):
     resolution: {integrity: sha512-o2pZCfATFtA/Gw/BB0Xm7k4EYaekXxaPGER3xGSY3FvzFJGTlJlZjBseaXwYSM94lZ0HniOjTokN3cWaLX6fow==}
     peerDependencies:
       '@sveltejs/kit': ^1.0.0
     dependencies:
-      '@sveltejs/kit': 1.26.0(svelte@4.2.2)(vite@4.5.0)
+      '@sveltejs/kit': 1.27.0(svelte@4.2.2)(vite@4.5.0)
       import-meta-resolve: 3.0.0
     dev: true
 
-  /@sveltejs/kit@1.26.0(svelte@4.2.2)(vite@4.5.0):
-    resolution: {integrity: sha512-CV/AlTziC05yrz7UjVqEd0pH6+2dnrbmcnHGr2d3jXtmOgzNnlDkXtX8g3BfJ6nntsPD+0jtS2PzhvRHblRz4A==}
+  /@sveltejs/kit@1.27.0(svelte@4.2.2)(vite@4.5.0):
+    resolution: {integrity: sha512-a1wPIq2uO3RsTmV+KbA4venOgCJDbfHTXFe+g7eJR3N8l46DSuulUONJ1qnk2EnZWYC1Uj3Wbp3US0WFocIzXg==}
     engines: {node: ^16.14 || >=18}
     hasBin: true
     requiresBuild: true
