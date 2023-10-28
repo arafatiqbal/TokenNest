@@ -1,10 +1,7 @@
 <script lang="ts">
+  import DataTable from '../../components/dataTable.svelte';
   import type { PageData } from './$types';
-
   export let data: PageData;
-  console.log(data);
 </script>
 
-<h2>
-  {data.item[1].name}
-</h2>
+<DataTable coinData={data.coinData} />
