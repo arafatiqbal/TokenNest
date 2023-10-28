@@ -14,6 +14,7 @@
 						Please Sign In to See the Dashboard
 					</h1>
 					<GithubButton />
+
 					<GoogleButton />
 				</div>
 				<div>
