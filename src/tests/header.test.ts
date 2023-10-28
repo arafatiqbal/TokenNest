@@ -3,11 +3,11 @@ import { describe, expect, it, afterEach } from 'vitest';
 import Header from '../components/header.svelte';
 
 describe('Header.svelte', () => {
-	afterEach(() => cleanup());
+  afterEach(() => cleanup());
 
-	it('mounts', () => {
-		const { container } = render(Header);
-		expect(container).toBeTruthy();
-		expect(container.innerHTML).toContain('TokenNest');
-	});
+  it('mounts', () => {
+    const { container } = render(Header);
+    expect(container).toBeTruthy();
+    expect(container.innerHTML).toContain('TokenNest');
+  });
 });
