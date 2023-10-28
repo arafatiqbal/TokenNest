@@ -1,5 +1,6 @@
 <script lang="ts">
-  export let coinData: any;
+  import type { Coins } from '../types/data';
+  export let coinData: Coins[];
 </script>
 
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg mx-10">
@@ -37,7 +38,6 @@
         <th scope="col" class="px-6 py-3"> Coin </th>
         <th scope="col" class="px-6 py-3"> Price </th>
         <th scope="col" class="px-6 py-3"> Change (24h) </th>
-        <!-- <th scope="col" class="px-6 py-3"> Price </th> -->
         <th scope="col" class="px-6 py-3"> Action </th>
       </tr>
     </thead>
@@ -47,8 +47,8 @@
           <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
             {coin.name}
           </th>
-          <td class="px-6 py-4"> ${coin.priceUsd} </td>
-          <td class="px-6 py-4"> {coin.changePercent24Hr} </td>
+          <td class="px-6 py-4"> $ {coin.price} </td>
+          <td class="px-6 py-4"> {coin.change24Hr} %</td>
           <td class="px-6 py-4">
             <a href="#" class="font-medium text-blue-600 hover:underline">View Graph</a>
           </td>
