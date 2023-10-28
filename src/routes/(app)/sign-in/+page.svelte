@@ -1,6 +1,6 @@
 <script lang="ts">
-  import GithubButton from '../../components/githubButton.svelte';
-  import GoogleButton from '../../components/googleButton.svelte';
+  import GithubButton from '../../../components/githubButton.svelte';
+  import GoogleButton from '../../../components/googleButton.svelte';
 </script>
 
 <section class="bg-gray-50">

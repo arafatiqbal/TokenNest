@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "concurrently \"vite dev\" \"json-server --watch mock-data.json\"",
+    "start": "concurrently \"vite dev\" \"json-server --watch static/mock-data/mock-data.json\"",
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
