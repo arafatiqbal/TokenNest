@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { signOut } from '@auth/sveltekit/client';
+  import { slide } from 'svelte/transition';
   let isExpanded = false;
   const clickHandler = () => {
     isExpanded = !isExpanded;
@@ -16,9 +18,9 @@
           on:click={clickHandler}
           id="dropdownDefaultButton"
           data-dropdown-toggle="dropdown"
-          class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-4 mb-2 py-2 text-center mr-3 md:mr-0"
           type="button"
-          >Profile
+        >
+          <img class="w-10 h-10 rounded" alt="Default avatar" />
         </button>
         <!-- Dropdown menu -->
         {#if isExpanded}
@@ -26,9 +28,17 @@
             id="dropdown"
             class="z-10 right-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 d"
           >
-            <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
+            <ul
+              transition:slide
+              class="py-2 text-sm text-gray-700"
+              aria-labelledby="dropdownDefaultButton"
+            >
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Sign out</a>
+                <a
+                  on:click={() => signOut({ callbackUrl: '/' })}
+                  href="/"
+                  class="block px-4 py-2 hover:bg-gray-100">Sign out</a
+                >
               </li>
             </ul>
           </div>

@@ -18,6 +18,5 @@ export const load: PageServerLoad = async () => {
       change24Hr: parseFloat(Number(data.changePercent24Hr).toFixed(2))
     };
   });
-  console.log(coinData);
   return { coinData };
 };
