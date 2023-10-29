@@ -1,10 +1,12 @@
 <script lang="ts">
   import { signOut } from '@auth/sveltekit/client';
   import { slide } from 'svelte/transition';
+
   let isExpanded = false;
   const clickHandler = () => {
     isExpanded = !isExpanded;
   };
+  export let session: any;
 </script>
 
 <section>
@@ -20,19 +22,20 @@
           data-dropdown-toggle="dropdown"
           type="button"
         >
-          <img class="w-10 h-10 rounded" alt="Default avatar" />
+          <img src={session.image} class="w-10 h-10 rounded" alt="Default avatar" />
         </button>
         <!-- Dropdown menu -->
         {#if isExpanded}
           <div
+            transition:slide
             id="dropdown"
             class="z-10 right-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 d"
           >
-            <ul
-              transition:slide
-              class="py-2 text-sm text-gray-700"
-              aria-labelledby="dropdownDefaultButton"
-            >
+            <div class="px-4 py-3 text-sm text-gray-900">
+              <div>{session.name}</div>
+              <div class="font-medium truncate">{session.email}</div>
+            </div>
+            <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
               <li>
                 <a
                   on:click={() => signOut({ callbackUrl: '/' })}
