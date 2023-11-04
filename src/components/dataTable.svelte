@@ -3,6 +3,7 @@
   export let coinData: Coins[];
 </script>
 
+<!-- svelte-ignore a11y-misplaced-scope -->
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg mx-10 lg:mx-96">
   <div class="overflow-x-auto">
     <h1 class="text-5xl font-bold text-center pb-10">Dashboard</h1>
@@ -26,7 +27,7 @@
             <td> $ {coin.price} </td>
             <td> {coin.change24Hr} %</td>
             <td>
-              <a href="#">View Graph</a>
+              <a href="/graph">View Graph</a>
             </td>
           </tr>
         {/each}

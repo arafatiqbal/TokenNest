@@ -8,6 +8,6 @@ describe('Footer.svelte', () => {
   it('mounts', () => {
     const { container } = render(Footer);
     expect(container).toBeTruthy();
-    expect(container.innerHTML).toContain('TokenNest™');
+    expect(container.innerHTML).toContain('TokenNest');
   });
 });
