@@ -15,7 +15,8 @@ export const load: PageServerLoad = async () => {
       id: data.id,
       name: data.name,
       price: parseFloat(Number(data.priceUsd).toFixed(2)),
-      change24Hr: parseFloat(Number(data.changePercent24Hr).toFixed(2))
+      change24Hr: parseFloat(Number(data.changePercent24Hr).toFixed(2)),
+      rank: data.rank
     };
   });
   return { coinData };

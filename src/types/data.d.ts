@@ -14,6 +14,7 @@ export type CoinData = {
 
 export type Coins = {
   id?: string;
+  rank?: string;
   name?: string;
   price?: float;
   change24Hr?: float;
