@@ -1,9 +1,0 @@
-{
-  "typescript.tsdk": "node_modules\\typescript\\lib",
-  "[javascript][html][typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[svelte]": {
-    "editor.defaultFormatter": "svelte.svelte-vscode"
-  }
-}
