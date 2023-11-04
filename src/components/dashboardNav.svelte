@@ -16,39 +16,37 @@
         <span class="self-center text-2xl font-semibold whitespace-nowrap">TokenNest</span>
       </a>
       <div class="content-end md:order-2">
-        <div class="flex items-center">
-          <h2 class="mx-2 text-center">{session.name}</h2>
+        <div class="flex flex-col">
           <button
             on:click={clickHandler}
             id="dropdownDefaultButton"
             data-dropdown-toggle="dropdown"
             type="button"
+            class="flex justify-center items-center"
           >
+            <h2 class="flex mx-2 text-center">{session.name}</h2>
             <img src={session.image} class="w-10 h-10 rounded" alt="Default avatar" />
           </button>
-        </div>
-        <!-- Dropdown menu -->
-        {#if isExpanded}
-          <div
-            transition:slide
-            id="dropdown"
-            class="z-10 right-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 d"
-          >
-            <div class="px-4 py-3 text-sm text-gray-900">
-              <div>{session.name}</div>
-              <div class="font-medium truncate">{session.email}</div>
+          <!-- Dropdown menu -->
+          {#if isExpanded}
+            <div transition:slide id="dropdown">
+              <!-- class="z-10 right-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 d" -->
+              <div class="px-4 py-3 text-sm text-gray-900">
+                <div>{session.name}</div>
+                <div class="font-medium truncate">{session.email}</div>
+              </div>
+              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
+                <li>
+                  <a
+                    on:click={() => signOut({ callbackUrl: '/' })}
+                    href="/"
+                    class="block px-4 py-2 hover:bg-gray-100">Sign out</a
+                  >
+                </li>
+              </ul>
             </div>
-            <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
-              <li>
-                <a
-                  on:click={() => signOut({ callbackUrl: '/' })}
-                  href="/"
-                  class="block px-4 py-2 hover:bg-gray-100">Sign out</a
-                >
-              </li>
-            </ul>
-          </div>
-        {/if}
+          {/if}
+        </div>
       </div>
     </div>
   </nav>

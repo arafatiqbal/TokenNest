@@ -1,59 +1,51 @@
 <script lang="ts">
 </script>
 
-<!-- Remove this and comment below when links are added, this is to make lint happy -->
-<!-- svelte-ignore a11y-invalid-attribute -->
-<section>
-  <nav class="bg-white border-gray-200">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="/" class="flex items-center">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap">TokenNest</span>
-      </a>
-      <div class="flex md:order-2">
-        <a
-          type="button"
-          href="/sign-in"
-          class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-4 mb-2 py-2 text-center mr-3 md:mr-0"
-          >Sign In</a
-        >
-      </div>
-      <div
-        class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-        id="navbar-cta"
-      >
+<!-- svelte-ignore a11y-label-has-associated-control -->
+<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+<section class="px-8 py-2">
+  <div class="navbar bg-base-100">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <label tabindex="0" class="btn btn-ghost lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h8m-8 6h16"
+            /></svg
+          >
+        </label>
+        <!-- PHONE NAV -->
         <ul
-          class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white"
+          tabindex="0"
+          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
         >
-          <li>
-            <a
-              href="/"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:hover:text-primary-700 md:p-0"
-              aria-current="page">Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0"
-              >About</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0"
-              >Services</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0"
-              >Contact</a
-            >
-          </li>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/our-work">Our Work</a></li>
+          <li><a href="/contact">Contact Us</a></li>
         </ul>
       </div>
+      <a href="/" class="btn btn-ghost normal-case text-xl">TokenNest</a>
     </div>
-  </nav>
+    <div class="navbar-center hidden lg:flex">
+      <!-- WEBSITE NAV   -->
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="/features">Features</a></li>
+        <li><a href="/our-work">Our Work</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a href="/sign-in">
+        <button class="btn btn-primary"> Sign In </button>
+      </a>
+    </div>
+  </div>
 </section>
