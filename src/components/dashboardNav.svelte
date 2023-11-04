@@ -14,7 +14,7 @@
     </div>
     <div class="flex-none">
       <div class="dropdown dropdown-end">
-        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+        <label tabindex="0" class="btn btn-ghost btn-circle avatar online">
           <div class="w-10 rounded-full">
             <img alt="User Avatar" src={session?.image} />
           </div>
