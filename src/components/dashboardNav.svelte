@@ -1,53 +1,39 @@
 <script lang="ts">
   import { signOut } from '@auth/sveltekit/client';
-  import { slide } from 'svelte/transition';
+  import type { UserSession } from '../types/userSession';
 
-  let isExpanded = false;
-  const clickHandler = () => {
-    isExpanded = !isExpanded;
-  };
-  export let session: any;
+  export let session: UserSession;
 </script>
 
-<section>
-  <nav class="bg-white h-3/5 border-gray-200">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="/" class="flex items-center">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap">TokenNest</span>
-      </a>
-      <div class="content-end md:order-2">
-        <div class="flex flex-col">
-          <button
-            on:click={clickHandler}
-            id="dropdownDefaultButton"
-            data-dropdown-toggle="dropdown"
-            type="button"
-            class="flex justify-center items-center"
-          >
-            <h2 class="flex mx-2 text-center">{session.name}</h2>
-            <img src={session.image} class="w-10 h-10 rounded" alt="Default avatar" />
-          </button>
-          <!-- Dropdown menu -->
-          {#if isExpanded}
-            <div transition:slide id="dropdown">
-              <!-- class="z-10 right-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 d" -->
-              <div class="px-4 py-3 text-sm text-gray-900">
-                <div>{session.name}</div>
-                <div class="font-medium truncate">{session.email}</div>
-              </div>
-              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
-                <li>
-                  <a
-                    on:click={() => signOut({ callbackUrl: '/' })}
-                    href="/"
-                    class="block px-4 py-2 hover:bg-gray-100">Sign out</a
-                  >
-                </li>
-              </ul>
-            </div>
-          {/if}
-        </div>
+<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+<!-- svelte-ignore a11y-label-has-associated-control -->
+<section class="px-8 py-2">
+  <div class="navbar bg-base-100">
+    <div class="flex-1">
+      <a href="/" class="btn btn-ghost normal-case text-xl">TokenNest</a>
+    </div>
+    <div class="flex-none">
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+          <div class="w-10 rounded-full">
+            <img alt="User Avatar" src={session.image} />
+          </div>
+        </label>
+        <ul
+          tabindex="0"
+          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+        >
+          <p class="px-2 py-2 text-bold">
+            {session.name}
+          </p>
+          <li />
+          <li>
+            <a on:click={() => signOut({ callbackUrl: '/' })} href="/" class="bg-secondary"
+              >Log Out
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-  </nav>
+  </div>
 </section>
