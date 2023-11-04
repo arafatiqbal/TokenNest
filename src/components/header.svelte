@@ -48,6 +48,9 @@
     </div>
     <div class="navbar-end">
       {#if session}
+        <a href="/dashboard">
+          <button class="btn btn-outline btn-sm mr-2"> Dashboard </button>
+        </a>
         <div class="flex-none">
           <div class="dropdown dropdown-end">
             <label tabindex="0" class="btn btn-ghost btn-circle avatar online">
