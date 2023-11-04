@@ -16,14 +16,17 @@
         <span class="self-center text-2xl font-semibold whitespace-nowrap">TokenNest</span>
       </a>
       <div class="content-end md:order-2">
-        <button
-          on:click={clickHandler}
-          id="dropdownDefaultButton"
-          data-dropdown-toggle="dropdown"
-          type="button"
-        >
-          <img src={session.image} class="w-10 h-10 rounded" alt="Default avatar" />
-        </button>
+        <div class="flex items-center">
+          <h2 class="mx-2 text-center">{session.name}</h2>
+          <button
+            on:click={clickHandler}
+            id="dropdownDefaultButton"
+            data-dropdown-toggle="dropdown"
+            type="button"
+          >
+            <img src={session.image} class="w-10 h-10 rounded" alt="Default avatar" />
+          </button>
+        </div>
         <!-- Dropdown menu -->
         {#if isExpanded}
           <div
