@@ -3,6 +3,13 @@
   import GoogleButton from '../../components/googleButton.svelte';
 </script>
 
+<section class="px-8 py-2">
+  <div class="navbar bg-base-100">
+    <div class="navbar-center">
+      <a href="/" class="btn btn-ghost normal-case text-xl">TokenNest</a>
+    </div>
+  </div>
+</section>
 <div class="hero min-h-screen bg-base-200">
   <div class="hero-content flex-col lg:flex-row-reverse">
     <div class="text-center lg:text-left px-12">

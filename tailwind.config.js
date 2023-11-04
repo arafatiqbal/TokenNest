@@ -2,7 +2,7 @@
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   daisyui: {
-    themes: ['cupcake']
+    themes: ['cupcake', 'luxury', 'night']
   },
   plugins: [require('daisyui')]
 };
