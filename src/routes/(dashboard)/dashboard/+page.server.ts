@@ -10,6 +10,7 @@ export const load: PageServerLoad = async () => {
   });
   const result = await data.json();
 
+  // result.data.map for the real call
   const coinData: Coins[] = result.map((data: CoinData) => {
     return {
       id: data.id,
