@@ -12,7 +12,7 @@
         (!('color-theme' in localStorage) &&
           window.matchMedia('(prefers-color-scheme: dark)').matches)
       ) {
-        document.documentElement.setAttribute('data-theme', 'night');
+        document.documentElement.setAttribute('data-theme', 'dark');
       } else {
         document.documentElement.setAttribute('data-theme', 'cookie');
       }
@@ -23,7 +23,7 @@
           // if set via local storage previously
           if (localStorage.getItem('color-theme')) {
             if (localStorage.getItem('color-theme') === 'light') {
-              document.documentElement.setAttribute('data-theme', 'night');
+              document.documentElement.setAttribute('data-theme', 'dark');
               localStorage.setItem('color-theme', 'dark');
             } else {
               document.documentElement.setAttribute('data-theme', 'cookie');
@@ -35,7 +35,7 @@
               document.documentElement.setAttribute('data-theme', 'cookie');
               localStorage.setItem('color-theme', 'light');
             } else {
-              document.documentElement.setAttribute('data-theme', 'night');
+              document.documentElement.setAttribute('data-theme', 'dark');
               localStorage.setItem('color-theme', 'dark');
             }
           }
