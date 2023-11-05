@@ -6,7 +6,7 @@ export const load: PageServerLoad = async () => {
   const result = await GetCoinData();
 
   // result.data.map for the real call
-  const coinDataResults: Coins[] = result.map((data: CoinData) => {
+  const coinData: Coins[] = result.map((data: CoinData) => {
     return {
       id: data.id,
       name: data.name,
@@ -15,6 +15,5 @@ export const load: PageServerLoad = async () => {
       rank: data.rank
     };
   });
-  const coinData = coinDataResults.slice(0, 10);
   return { coinData };
 };

@@ -4,9 +4,9 @@
 </script>
 
 <!-- svelte-ignore a11y-misplaced-scope -->
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg mx-10 lg:mx-96">
+<div class="relative overflow-x-auto shadow-xl sm:rounded-lg w-full md:w-full lg:w-4/12 lg:mx-10">
   <div class="overflow-x-auto">
-    <h1 class="text-5xl font-bold text-center pb-10">Dashboard</h1>
+    <h1 class="text-2xl font-bold text-center pb-10">Top 10 Coins</h1>
     <table class="table">
       <thead>
         <tr>
@@ -14,7 +14,6 @@
           <th scope="col" class="px-6 py-3"> Coin </th>
           <th scope="col" class="px-6 py-3"> Price </th>
           <th scope="col" class="px-6 py-3"> Change (24h) </th>
-          <th scope="col" class="px-6 py-3"> Action </th>
         </tr>
       </thead>
       <tbody>
@@ -26,9 +25,6 @@
             </td>
             <td> $ {coin.price} </td>
             <td> {coin.change24Hr} %</td>
-            <td>
-              <a href="/graph">View Graph</a>
-            </td>
           </tr>
         {/each}
       </tbody>
