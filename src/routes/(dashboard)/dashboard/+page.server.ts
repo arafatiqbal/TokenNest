@@ -1,17 +1,12 @@
 import type { PageServerLoad } from './$types';
 import type { CoinData, Coins } from '../../../types/data';
+import { GetCoinData } from '../../../server/crypto-api';
+
 export const load: PageServerLoad = async () => {
-  // Use real api later https://api.coincap.io/v2/assets
-  const data = await fetch('http://127.0.0.1:3000/data', {
-    method: 'GET',
-    headers: {
-      Accept: 'application/json'
-    }
-  });
-  const result = await data.json();
+  const result = await GetCoinData();
 
   // result.data.map for the real call
-  const coinData: Coins[] = result.map((data: CoinData) => {
+  const coinDataResults: Coins[] = result.map((data: CoinData) => {
     return {
       id: data.id,
       name: data.name,
@@ -20,5 +15,6 @@ export const load: PageServerLoad = async () => {
       rank: data.rank
     };
   });
+  const coinData = coinDataResults.slice(0, 10);
   return { coinData };
 };
