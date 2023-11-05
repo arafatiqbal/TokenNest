@@ -1,6 +1,13 @@
 <script lang="ts">
   import type { Coins } from '../types/data';
   export let coinData: Coins[];
+
+  let getColor = (changeValue: number) => {
+    if (changeValue > 0) return 'text-success';
+    if (changeValue < 0) return 'text-error';
+    return;
+  };
+  console.log(coinData);
 </script>
 
 <!-- svelte-ignore a11y-misplaced-scope -->
@@ -11,9 +18,9 @@
       <thead>
         <tr>
           <th />
-          <th scope="col" class="px-6 py-3"> Coin </th>
-          <th scope="col" class="px-6 py-3"> Price </th>
-          <th scope="col" class="px-6 py-3"> Change (24h) </th>
+          <th scope="col" class="py-3"> Coin </th>
+          <th scope="col" class="py-3"> Price </th>
+          <th scope="col" class="py-3"> Change (24h) </th>
         </tr>
       </thead>
       <tbody>
@@ -23,8 +30,8 @@
             <td scope="row">
               {coin.name}
             </td>
-            <td> $ {coin.price} </td>
-            <td> {coin.change24Hr} %</td>
+            <td> ${coin.price} </td>
+            <td class={`${getColor(coin.change24Hr)}`}> {coin.change24Hr} %</td>
           </tr>
         {/each}
       </tbody>
