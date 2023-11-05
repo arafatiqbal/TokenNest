@@ -27,6 +27,8 @@
   });
 </script>
 
+<!-- svelte-ignore a11y-missing-attribute -->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="drawer lg:drawer-open">
   <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content flex flex-col items-center justify-center">
