@@ -35,7 +35,6 @@
     <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
     <!-- Page content here -->
     {#if context === 'crypto'}
-      <!-- content here -->
       <DataTable coinData={data.coinData} />
     {/if}
     {#if context === 'stock'}
@@ -45,7 +44,7 @@
   <div class="drawer-side">
     <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay" />
     <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <ul id="menu" class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+    <ul id="menu" class="menu p-4 w-80 min-h-full bg-base-200 text-base-content shadow-inner">
       <!-- Sidebar content here -->
       <li>
         <a class="button btn-active btn-secondary" on:click={() => setContext('crypto')}>Crypto</a>
