@@ -7,13 +7,12 @@
     if (changeValue < 0) return 'text-error';
     return;
   };
-  console.log(coinData);
 </script>
 
 <!-- svelte-ignore a11y-misplaced-scope -->
 <div class="relative overflow-x-auto shadow-xl sm:rounded-lg w-11/12">
   <div class="overflow-x-auto">
-    <h1 class="text-2xl font-bold text-center pb-10">Top 10 Coins</h1>
+    <h1 class="text-2xl font-bold text-center pb-6">Top 10 Coins</h1>
     <table class="table">
       <thead>
         <tr>
