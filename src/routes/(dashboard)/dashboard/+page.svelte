@@ -31,7 +31,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="drawer lg:drawer-open">
   <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-  <div class="drawer-content flex flex-col items-center justify-center">
+  <div class="drawer-content flex flex-col items-center py-0">
     <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
     <!-- Page content here -->
     {#if context === 'crypto'}
